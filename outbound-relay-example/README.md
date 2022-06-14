@@ -17,7 +17,7 @@ This example demonstrates how easy it is to use the outbound relay feature in th
 ## Usage
 
 ### Setup
-This example uses Serverless to automate the setup and deployment of the cloud functions for you. To proceed you'll need to setup the Serverless CLI, just follow [the guide on their website](https://www.serverless.com/framework/docs/getting-started) and return here once you're done.
+This example uses [Serverless](https://www.serverless.com/) to automate the setup and deployment of the cloud functions for you. To proceed you'll need to setup the Serverless CLI, just follow [the guide on their website](https://www.serverless.com/framework/docs/getting-started) and return here once you're done.
 
 To use this example you'll also need to have an Evervault team, if you don't already have one go to [app.evervault.com](https://app.evervault.com/login) and either create an account or sign in with Google or GitHub. When your account is created a personal team is created for you automatically.
 
