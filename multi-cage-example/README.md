@@ -90,7 +90,7 @@ By default, this means that all outbound traffic will be decrypted by Relay ([le
 We run a cage as follows.
 
 ```js
-await evervault.run(<cage name>, <body>);
+await evervault.run(<cage name>, <request body>);
 ```
 
 The cage name can be obtained from the dashboard.
