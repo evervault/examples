@@ -69,7 +69,7 @@ layers:
 
 We will now create a Relay instance pointing to this lambda.
 We will send data to this relay rather than directly to the server so that plaintext data never touches our server.
-To do so, navigate to the Evervault dashboard, create a relay which points to the url of your lambda and specify the fields to encrypt as `email`, `number`, `age` and `ailments`.
+To do so, navigate to the Evervault dashboard, create a relay which points to the url of your lambda and specify the fields to encrypt as `email`, `number`, `age`, `ailments` and `entitlements`.
 
 ![Relay](images/relay.png)
 
