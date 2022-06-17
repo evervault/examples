@@ -24,7 +24,7 @@ We will be using [serverless](https://www.serverless.com) to deploy the lambda.
 For this to work, you will need to have to setup the AWS CLI.
 For information on doing that, see [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
 
-Once you have theat set up, simply deploy the lambda to AWS using the commands:
+Once you that setup, create a `.env` file in the `serers/nodejs/` and fill it with the environment variables: `EVERVAULT_API_KEY`, `CHECK_ENTITLEMENTS_CAGE` and `VALIDATE_USER_CREDENTIALS_CAGE`. The syntax is simply `VARIABLE=VALUE`.
 
 ```sh
 cd servers/nodejs/
@@ -150,7 +150,7 @@ For example, we could use the `timeout` directive to indicate the amount of time
 The default value is 30 seconds.
 Add this directive to the `cage.toml` file of the `check-entitlements` cage to indicate that it should be allowed to live for a minute.
 
-```
+```toml
 [cage]
 timeout=60
 ```
