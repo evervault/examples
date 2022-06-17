@@ -2,3 +2,4 @@
 **/.serverless
 **/package-lock.json
 **/*.swp
+.env

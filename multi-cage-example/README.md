@@ -1,5 +1,6 @@
+[![Evervault](https://evervault.com/evervault.svg)](https://evervault.com/)
+
 # Multi Cage Example
-[Evervault](https://evervault.com) makes it easy to encrypt data at source, process it in a Cage — a secure, serverless function — and never store it unencrypted.
 
 This example will show you how to have multiple cages in a single github repository.
 
