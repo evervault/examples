@@ -55,13 +55,13 @@ Serverless: Stack update finished...
 Service Information
 service: multi-cage-example
 stage: dev
-region: <region>
+region: us-east-1
 stack: multi-cage-example-dev
 resources: 23
 api keys:
   None
 endpoints:
-  POST - <lambda url>/
+  POST - <YOUR-LAMBDA-URL>/
 functions:
   handler: multi-cage-example-dev-handler
 layers:
@@ -91,7 +91,7 @@ By default, this means that all outbound traffic will be decrypted by Relay ([le
 We run a cage as follows.
 
 ```js
-await evervault.run(<cage name>, <request body>);
+await evervault.run(<CAGE-NAME>, <REQUEST-BODY>);
 ```
 
 The cage name can be obtained from the dashboard.
@@ -107,7 +107,7 @@ The Cage will return encrypted data to the server, and the server will send a re
 If you invoke the server as follows:
 
 ```sh
-curl <your relay url> \
+curl <YOUR-RELAY-URL> \
 -X POST \
 -H 'content-type: application/json' \
 --data '{"action":"check-entitlements", "age":35, "ailments":["diabetes"]}'
@@ -129,7 +129,7 @@ You should see the result:
 If you invoke the server as follows:
 
 ```sh
-curl <your relay url> \
+curl <YOUR-RELAY-URL> \
 -X POST
 -H 'content-type: application/json' \
 --data '{"action":"validate-user-credentials", "email":"user@mail.com", "phone":"+1 (415) 223-8720"}'
