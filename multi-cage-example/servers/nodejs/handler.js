@@ -1,4 +1,4 @@
-const Evervault = requrie('@evervault/sdk')
+const Evervault = require('@evervault/sdk')
 
 const evervault = new Evervault(process.env.EVERVAULT_API_KEY, {intercept: true})
 
