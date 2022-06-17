@@ -1,7 +1,7 @@
 app: aws-node-http-api
 service: multi-cage-example
 frameworkVersion: '3'
-useDotEnv: true
+useDotenv: true
 
 provider:
   name: aws
@@ -15,7 +15,7 @@ functions:
           path: /
           method: post
     environment:
-      EVERVAULT_API_KEY:
-      CHECK_ENTITLEMENTS_CAGE:
-      VALIDATE_USER_CREDENTIALS_CAGE:
+      EVERVAULT_API_KEY: ${env:EVERVAULT_API_KEY}
+      CHECK_ENTITLEMENTS_CAGE: ${CHECK_ENTITLEMENTS_CAGE}
+      VALIDATE_USER_CREDENTIALS_CAGE: ${VALIDATE_USER_CREDENTIALS_CAGE}
 
