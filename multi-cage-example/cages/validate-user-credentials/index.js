@@ -15,5 +15,8 @@ exports.handler = async (data) => {
 	errorMessages.push('Invalid email provided');
     }
 
-    return { error, errorMessages: error ? await evervault.encrypt(errorMessages) : undefined }
+  return await evervault.encrypt({
+    error,
+    errorMessages: error ? errorMessages : undefined
+  });
 };
