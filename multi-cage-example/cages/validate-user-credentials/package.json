@@ -1,0 +1,31 @@
+{
+  "name": "hello-cage",
+  "version": "1.0.0",
+  "description": "A sample cage template that will get you up and running quickly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evervault/hello-cage.git"
+  },
+  "keywords": [
+    "privacy",
+    "cage",
+    "security",
+    "encryption",
+    "evervault"
+  ],
+  "author": "Evervault Inc.",
+  "license": "MIT",
+  " bugs": {
+    "url": "https://github.com/evervault/hello-cage/issues"
+  },
+  "homepage": "https://github.com/evervault/hello-cage#readme",
+  "dependencies": {
+    "phone": "^3.1.21",
+    "validate": "^5.2.0",
+    "validate.js": "^0.13.1"
+  }
+}

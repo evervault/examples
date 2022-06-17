@@ -1,0 +1,21 @@
+app: aws-node-http-api
+service: multi-cage-example
+frameworkVersion: '3'
+useDotEnv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  
+functions:
+  register:
+    handler: handler.handleRequest
+    events:
+      - httpApi:
+          path: /
+          method: post
+    environment:
+      EVERVAULT_API_KEY:
+      CHECK_ENTITLEMENTS_CAGE:
+      VALIDATE_USER_CREDENTIALS_CAGE:
+
