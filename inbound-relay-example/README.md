@@ -10,7 +10,7 @@ authorAvatar: 'https://avatars.githubusercontent.com/u/47702631?s=200&v=4'
 -->
 [![Evervault](https://evervault.com/evervault.svg)](https://evervault.com/)
 
-# Evervault Outbound Relay Example Code
+# Evervault Inbound Relay Example Code
 
 This example demonstrates how easy it is to use the inbound relay feature in the Evervault SDK to securely store your customer's personal data in a database.
 In place of setting up an actual database this function simply prints data to STDOUT, however it could easily be adapted to write to a database server.
@@ -35,13 +35,13 @@ $ serverless deploy
 Assuming that all is well in your configuration you should see an output similar to:
 
 ```bash
-Deploying evervault-outbound-relay-example to stage dev (us-east-1)
+Deploying evervault-inbound-relay-example to stage dev (us-east-1)
 
-✔ Service deployed to stack evervault-outbound-relay-example-dev (126s)
+✔ Service deployed to stack evervault-inbound-relay-example-dev (126s)
 
 endpoint: POST - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/
 functions:
-  evRelayExample: evervault-outbound-relay-example-dev-evRelayExample (2.8 MB)
+  evRelayExample: evervault-inbound-relay-example-dev-evRelayExample (2.8 MB)
 ```
 
 Now you need to setup the Evervault relay.
