@@ -9,7 +9,7 @@ module.exports.evRelayExample = async (event) => {
   // setting the `intercept` option to true turns on the outbound relay
   const evervault = new Evervault(process.env.EVERVAULT_API_KEY, {intercept: true});
 
-  // Process the transaction and encrypt the transaction details
+  // Generate a mock transaction for this card
   const transaction = processTransaction(body.creditCardNumber);
 
   // Create the payment details object

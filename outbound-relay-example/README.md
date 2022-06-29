@@ -12,7 +12,9 @@ authorAvatar: 'https://avatars.githubusercontent.com/u/47702631?s=200&v=4'
 
 # Evervault Outbound Relay Example Code
 
-This example demonstrates how easy it is to use the outbound relay feature in the Evervault SDK to decrypt your customer's data before sending it to be securely processed by third parties.
+Outbound Relay intercepts your requests to third parties, and decrypts any Evervault encrypted data before forwarding it on to its destination. 
+In a real-world scenario, this might be a Payment Gateway, an SMS API, or any other 3rd party SaaS provider.
+In this example we will generate a transaction report, encrypt it on the server and then send that Evervault Encrypted transaciton report to RequestBin so you can see for yourself how the decryption works, and gain an understanding of to incorporate Outbound Relay in to your application.
 
 ## Usage
 
@@ -70,8 +72,8 @@ Sample CURL output:
   "transaction":{
     "transactionConfirmationCode":"ev:RFVC:number:YuWm73MZE3JHh+u/:AvoxqQ9wGatG35MVpeuzpuoOLGPhHhIsd+P1NrqBcjWm:LfSSGlS/fkE1DHKSJMc5+s9HAdZaPgg:$",
     "timestamp":"ev:RFVC:number:82pDf11hbkPZK8M7:AvoxqQ9wGatG35MVpeuzpuoOLGPhHhIsd+P1NrqBcjWm:tY/GSiekw5orP0eM+qSgi6/8m2tCbQU7VYxu6tg:$"
-    }
-  }                                                 
+  }
+}
 ```
 
 Sample Request Bin:
@@ -81,6 +83,6 @@ Sample Request Bin:
   "transaction":{
     "transactionConfirmationCode":2445148,
     "timestamp":1655223946545
-    }
-  }                                                 
+  }
+}                                                 
 ```
