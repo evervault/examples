@@ -14,7 +14,7 @@ authorAvatar: 'https://avatars.githubusercontent.com/u/47702631?s=200&v=4'
 
 Outbound Relay intercepts your requests to third parties, and decrypts any Evervault encrypted data before forwarding it on to its destination. 
 In a real-world scenario, this might be a Payment Gateway, an SMS API, or any other 3rd party SaaS provider.
-In this example we will generate a transaction report, encrypt it on the server and then send that Evervault Encrypted transaciton report to RequestBin so you can see for yourself how the decryption works, and gain an understanding of to incorporate Outbound Relay in to your application.
+In this example we will generate a transaction report, encrypt it on the server and then send that Evervault Encrypted transaction report to RequestBin so you can see for yourself how the decryption works, and gain an understanding of how to integrate Outbound Relay in your application.
 
 ## Usage
 
