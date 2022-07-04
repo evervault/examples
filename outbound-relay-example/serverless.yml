@@ -1,0 +1,19 @@
+app: aws-node-http-api
+service: evervault-outbound-relay-example
+frameworkVersion: '3'
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  evRelayExample:
+    handler: handler.evRelayExample
+    events:
+      - httpApi:
+          path: /
+          method: post
+    environment:
+      EVERVAULT_API_KEY:
+      REQUEST_ENDPOINT:
