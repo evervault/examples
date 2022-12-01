@@ -1,11 +1,11 @@
 app: aws-node-http-api
-service: multi-cage-example
+service: multi-function-example
 frameworkVersion: '3'
 useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   
 functions:
   register:
@@ -16,6 +16,6 @@ functions:
           method: post
     environment:
       EVERVAULT_API_KEY: ${env:EVERVAULT_API_KEY}
-      CHECK_ENTITLEMENTS_CAGE: ${CHECK_ENTITLEMENTS_CAGE}
-      VALIDATE_USER_CREDENTIALS_CAGE: ${VALIDATE_USER_CREDENTIALS_CAGE}
+      CHECK_ENTITLEMENTS_CAGE: ${CHECK_ENTITLEMENTS_FUNCTION}
+      VALIDATE_USER_CREDENTIALS_CAGE: ${VALIDATE_USER_CREDENTIALS_FUNCTION}
 

@@ -1,0 +1,30 @@
+{
+    "name": "check-entitlements",
+    "version": "1.0.0",
+    "description": "A sample function template that will get you up and running quickly",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/evervault/template-node-hello-function.git"
+    },
+    "keywords": [
+      "privacy",
+      "function",
+      "security",
+      "encryption",
+      "evervault"
+    ],
+    "author": "Evervault Inc.",
+    "license": "MIT",
+    " bugs": {
+      "url": "https://github.com/evervault/template-node-hello-function/issues"
+    },
+    "homepage": "https://github.com/evervault/template-node-hello-function#readme",
+    "dependencies": {
+      "axios": "^0.27.2"
+    }
+  }
+  

@@ -1,0 +1,4 @@
+[function]
+name = "validate-user-credentials"
+language = "node@16"
+handler = "index.handler"

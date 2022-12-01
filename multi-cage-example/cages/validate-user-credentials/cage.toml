@@ -1,6 +1,0 @@
-[cage]
-timeout = 10
-
-[cage.playground]
-email = "valid@email.com"
-number = "invalid-0888"

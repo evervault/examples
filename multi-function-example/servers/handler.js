@@ -7,9 +7,9 @@ module.exports.handleRequest = async (event) => {
     var result;
     
     if ('validate-user-credentials' == body.action) {
-	result = await evervault.run(process.env.VALIDATE_USER_CREDENTIALS_CAGE, body);
+	result = await evervault.run(process.env.VALIDATE_USER_CREDENTIALS_FUNCTION, body);
     } else if ('check-entitlements' == body.action) {
-	result = await evervault.run(process.env.CHECK_ENTITLEMENTS_CAGE, body);
+	result = await evervault.run(process.env.CHECK_ENTITLEMENTS_FUNCTION, body);
     } else {
 	return { statusCode: 400, errorMessages: ["Illegal Operation"] };
     }
