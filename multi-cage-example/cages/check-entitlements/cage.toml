@@ -1,6 +1,0 @@
-[cage]
-timeout = 40
-
-[cage.playground]
-age = 30
-ailments = ["diabetes"]

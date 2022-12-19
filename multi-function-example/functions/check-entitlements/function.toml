@@ -1,0 +1,4 @@
+[function]
+name = "check-entitlements"
+language = "node@16"
+handler = "index.handler"
