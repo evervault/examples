@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div id="toast-container"></div>
+    <form id="payment-form">
+      <div id="card-element">
+        <!-- Card input elements will be created here -->
+      </div>
+      <button id="checkout">Checkout</button>
+    </form>
+    <script src="https://js.evervault.com/v2"></script>
+    <script src="toast.js" type="module"></script>
+    <script>
+      const evervault = new Evervault("team_yourteamid", "app_yourappid");
+      const inputs = evervault.inputs("card-element");
+
+      document
+        .getElementById("checkout")
+        .addEventListener("click", async (e) => {
+          e.preventDefault();
+          const { encryptedCard } = await inputs.getData();
+          try {
+            const response = await fetch("/api/checkout", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ card: encryptedCard }),
+            });
+            console.log(await response.json());
+            createToast("payment successful");
+          } catch {
+            createToast("payment failed");
+          }
+        });
+
+      function createToast(message) {
+        let toastContainer = document.getElementById("toast-container");
+        toastContainer.insertAdjacentHTML(
+          "beforeend",
+          `<p class="toast"> ${message}</p>`
+        );
+        const toast = toastContainer.lastElementChild;
+        toast.addEventListener("animationend", () => toast.remove());
+      }
+    </script>
+  </body>
+</html>

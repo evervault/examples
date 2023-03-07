@@ -6,18 +6,18 @@ Inputs encrypts customer card data and keeps it encrypted as it moves from your 
 
 You can then pass the encrypted card data to multiple payment processors, such as Checkout.com and Stripe, where Outbound Relay automatically decrypts the card details. You can add additional payment processors as needed.
 
-To get an idea of what it will look like at the end of the guide, watch [this demo](https://www.youtube.com/watch?v=FQ8_ZDBJdTM).
+To get an idea of what it will look like at the end of the guide, watch [this demo](https://www.youtube.com/watch?v=FQ8_ZDBJdTM). You can follow along step by step from our (Guides)[https://docs.evervault.com/guides/].
 
 ## Getting Started
 
-Check out the starter app to follow along in the guide:
+Check out the starter app to follow along in the (guide)[https://docs.evervault.com/guides/]:
 
-`git clone https://github.com/evervault/examples/encrypted-multi-psp`
+`git clone https://github.com/evervault/examples/encrypted-multi-psp-example`
 `git checkout tags/starter-project`
 
 Or clone the finished project to run instantly:
 
-`git clone https://github.com/evervault/examples/encrypted-multi-psp`
+`git clone https://github.com/evervault/examples/encrypted-multi-psp-example`
 
 Install the dependencies and start the server.
 
