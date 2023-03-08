@@ -40,12 +40,12 @@ Each example contains a `README.md` with an explanation about the example and it
 
 **Have an example?** Submit a PR or [open an issue](https://github.com/evervault/examples/issues). ⚡️
 
-| Example | Runtime  | Guide
+| Example | Runtime  |
 |:--------------------------- |:-----|
 | [Inbound Relay](https://github.com/evervault/examples/tree/main/inbound-relay-example) <br/> Use Inbound Relay to securely store your customer's personal data in a database. | NodeJS |
 | [Outbound Relay](https://github.com/evervault/examples/tree/main/outbound-relay-example) <br/> Use Outbound Relay to intercept your requests to third parties, and decrypt any Evervault encrypted data before forwarding it on to its destination. | NodeJS |
 | [Multiple Functions](https://github.com/evervault/examples/tree/main/multi-function-example) <br/> Demonstrates having multiple functions in a single github repository. | NodeJS |
-| [Encrypted Multi-PSP](https://github.com/evervault/examples/tree/main/encrypted-multi-psp-example) <br/> Demonstrates having multiple functions in a single github repository. | NodeJS | (Guide)[https://docs.evervault.com/guides/multi-psp]
+| [Encrypted Multi-PSP](https://github.com/evervault/examples/tree/main/encrypted-multi-psp-example) <br/> Use Evervault Inputs and Outbound Relay to collect and encrypt card details before conditionally sending them to multiple Payment Processors. | NodeJS |
 
 ## Community Examples
 
