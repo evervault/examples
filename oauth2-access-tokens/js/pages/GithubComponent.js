@@ -7,14 +7,14 @@ export default function GitHubComponent() {
             target="_blank"
             rel="noopener noreferrer"
         >
-        Sign up with {' '}
-        <Image
-            src="/github.png"
-            alt="Github Logo"
-            width={24}
-            height={24}
-            priority
-        />
+            Sign up with {' '}
+            <Image
+                src="/github.png"
+                alt="Github Logo"
+                width={24}
+                height={24}
+                priority
+            />
         </a>
     );
 };
