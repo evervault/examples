@@ -16,7 +16,8 @@ if __name__ == '__main__':
 @app.route("/callback", methods=['POST', 'GET'])
 def callback():
     '''
-    A function that calls the Evervault Function and returns the decrypted data.
+    A function passes the code to GitHub to obtain the access token
+    and uses the encrypted token to request the user name and email.
     '''
     evervault.init(
         api_key=os.environ.get("EVERVAULT_API_KEY"),
