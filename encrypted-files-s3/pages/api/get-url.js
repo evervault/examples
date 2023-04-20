@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   const client = new S3Client(clientParams);
   const command = new PutObjectCommand({
     Bucket: process.env.BUCKET_NAME,
-    Key: req.query.file,
+    Key: req.query.fileName,
     ContentType: req.query.fileType,
   })
 

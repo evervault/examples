@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useEvervault } from '@evervault/react';
 
 export default function ChildComponent() {
@@ -11,7 +11,7 @@ export default function ChildComponent() {
     e.preventDefault();
     const fileName = encrypted.name
     const fileType = encrypted.type
-    const res = await fetch(`/api/get-url?file=${fileName}&fileType=${fileType}`);
+    const res = await fetch(`/api/get-url?fileName=${fileName}&fileType=${fileType}`);
     const { url } = await res.json()
 
     const upload = await fetch(url, {

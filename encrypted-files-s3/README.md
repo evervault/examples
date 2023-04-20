@@ -1,12 +1,22 @@
 ## Upload Encrypted Files to an S3 Bucket Using Next.js
 
-A simple Next.js app that encrypts an uploaded file using the Evervault React SDK and and saves the encrypted file to an s3 bucket via a presigned url.
+A simple Next.js app that encrypts an uploaded file using the Evervault React SDK and and saves the encrypted file to an s3 bucket via a presigned url. You can follow allong using the [associated guide from the Evervault docs](https://docs.evervault.com/guides/file-to-s3).
 
 This demo is made with [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -18,9 +28,9 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The request for the presigned URL can be edited in `pages/api/get-url.js`.
+The request for the presigned URL can be edited in `pages/api/get-url.js`. It follows the AWS SDK for JavaScript v3 — see the [documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_s3_request_presigner.html) for further details.
 
-The input can be edited in `ChildComponent.js`
+The input can be edited in `ChildComponent.js` and uses the [Evervault JavaScript and React SDK](https://docs.evervault.com/sdks/javascript).
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 

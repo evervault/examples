@@ -1,11 +1,11 @@
 import '@/styles/globals.css'
-import { EvervaultProvider } from '@evervault/react';
-import ChildComponent from './ChildComponent';
+import { EvervaultProvider, EvervaultInput } from '@evervault/react';
 
 export default function App() {
+
   return (
-    <EvervaultProvider teamId={'team_2da709d50917'} appId={'app_3babfc3edba3'}>
-      <ChildComponent />
+    <EvervaultProvider teamId={process.env.NEXT_APP_TEAM_ID} appId={process.env.NEXT_APP_APP_ID}>
+      <EvervaultInput />
     </EvervaultProvider>
   );
 }
