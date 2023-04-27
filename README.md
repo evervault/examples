@@ -48,6 +48,7 @@ Each example contains a `README.md` with an explanation about the example and it
 | [Encrypted Multi-PSP](https://github.com/evervault/examples/tree/main/encrypted-multi-psp-example) <br/> Use Evervault Inputs and Outbound Relay to collect and encrypt card details before conditionally sending them to multiple Payment Processors. | NodeJS |
 | [OAuth 2 Access Tokens - Python](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/python) <br/> Use the Python SDK and Outbound Relay to encrypt access tokens from a Github OAuth app. | Python |
 | [OAuth 2 Access Tokens - JavaScript](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/js) <br/> Use the React and Node SDKs with Outbound Relay to encrypt access tokens from a Github OAuth app. | NodeJS |
+| [Encrypted Files to S3 Bucket](https://github.com/evervault/examples/tree/main/encrypted-files-s3) <br/> Use the React and Node SDKs to encrypt a file and upload it to an S3 bucket. | NodeJS |
 
 ## Community Examples
 
