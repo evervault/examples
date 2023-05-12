@@ -7,8 +7,11 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
+cage_name = os.environ.get('CAGE_NAME')
+app_id = os.environ.get('APP_ID')
+
 attested_session = evervault.cage_requests_session({ 
-    'med-cage': {
+    cage_name: {
         "PCR0": "",
         "PCR1": "",
         "PCR2": "",
@@ -28,8 +31,6 @@ body, header = urllib3.encode_multipart_formdata(fields)
 
 start = time.time()
 
-cage_name = os.environ.get('CAGE_NAME')
-app_id = os.environ.get('APP_ID')
 response = attested_session.post(
     f'https://{cage_name}.{app_id}.cages.evervault.com/upload',
     headers={'Content-Type': header},

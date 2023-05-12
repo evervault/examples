@@ -14,12 +14,11 @@ A Python app that takes in an image file of a brain scan and runs the image agai
 
 ```
 curl https://cage-build-assets.evervault.com/cli/install -sL | sh
-export EV_API_KEY=<Your-Key-Here>
 ```
 
 
 ## Add the Environment Variables
-In the Cages Dashboard, add the following environment variables:
+In the Cages Dashboard, add the following environment variables as secrets:
 `S3_REGION`
 `ACCESS_KEY`
 `SECRET_ACCESS_KEY`
@@ -31,7 +30,7 @@ In the Cages Dashboard, add the following environment variables:
 ```
 ev-cage init -f ./Dockerfile \
 --name med-cage \
---debug --egress
+--disable-api-key-auth
 ```
 
 
