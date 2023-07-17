@@ -32,20 +32,26 @@ async function categorize(ticket) {
     });
   const openai = new OpenAIApi(configuration);
 
-  prompt = "Classify the following ticket into one of the following categories: \n\n1. Refund\n2. Exchange\n3. Replacement\n" + ticket.description + "\nCategory:"
-      
-  const response = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: prompt,
+  const response = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [
+      {
+        "role": "system",
+        "content": "You will be presented with support tickets and your job is to provide a tag from the following list:\n\n- Refund\n- Exchange\n- Replacement"
+      },
+      {
+        "role": "user",
+        "content": ticket.description
+      }
+    ],
     temperature: 0,
     max_tokens: 64,
     top_p: 1.0,
     frequency_penalty: 0.0,
     presence_penalty: 0.0,
-    stop: '\n'
-  }).then(response => { return response.data });
+  });
 
-  ticket.category = response.choices[0].text;
-  
+  ticket.category = response.data.choices[0].message.content;
+
   return ticket
 }

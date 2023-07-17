@@ -4,7 +4,7 @@
   "description": "for use with the relay redaction guide repo",
   "main": "redaction.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node redaction.js"
   },
   "author": "",
   "license": "ISC",
