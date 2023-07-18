@@ -51,6 +51,7 @@ Each example contains a `README.md` with an explanation about the example and it
 | [Encrypted Files to S3 Bucket](https://github.com/evervault/examples/tree/main/encrypted-files-s3) <br/> Use the React and Node SDKs to encrypt a file and upload it to an S3 bucket. | NodeJS |
 | [Process Medical Data and Model in a Cage](https://github.com/evervault/examples/tree/main/medical-cage) <br/> Use Cages to run inference on a sensitive model and data. | Python |
 | [Run GPT-2 in a Cage](https://github.com/evervault/examples/tree/main/cages-llm) <br/> Generate text from a prompt inside of a Cage using GPT-2. | Python |
+| [Redact PII from OpenAI Prompts](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Categorize support tickets using OpenAI with PII redacted using Relay Redaction. | NodeJS |
 
 ## Community Examples
 
