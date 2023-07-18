@@ -4,7 +4,7 @@
   "description": "for use with the relay redaction guide repo",
   "main": "redaction.js",
   "scripts": {
-    "run": "node redaction.js"
+    "dev": "node redaction.js"
   },
   "author": "",
   "license": "ISC",
