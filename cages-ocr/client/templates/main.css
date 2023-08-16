@@ -1,0 +1,27 @@
+body {
+    width: 300px;
+    margin: 50px auto;
+    font-family: 'Inter'
+  }
+
+input {
+    width: 100%;
+    margin-top: 5px
+  }
+
+/* .field {
+  margin-top: 5px
+} */
+
+#submit {
+    background: #6633ee;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
