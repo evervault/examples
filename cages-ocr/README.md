@@ -50,10 +50,10 @@ In the Client directory, open up `.env.example` and rename it to `.env`, then ad
 Now you may run the Flask app which will allow you to upload a passport file and test the app. 
 
 ```
-cd client
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
+cd client
 flask run
 ```
 
