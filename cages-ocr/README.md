@@ -1,10 +1,11 @@
-# Run OCR on a Sensitve Document in a Cage
+# Invoke OCR on a Sensitve Document in a Cage
 
 A Python app that takes in a passport document and uses an OCR library to detect the fields within a document, assess the validty of the document, and determine whether based on the document you are approved for a loan. You can follow allong using the [associated guide from the Evervault docs](https://docs.evervault.com/guides/cages-ocr).
 
 
 ## Prerequisites
 
+- Python 3.6 or higher
 - An Evervault account ([create a free account here](https://app.evervault.com/register))
 - Docker installed ([get it here](https://docs.docker.com/get-docker/))
 
