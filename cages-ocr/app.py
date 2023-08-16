@@ -69,8 +69,6 @@ def do_mrz(filepath):
         "Sanctions": {}
     }
 
-    if names[0:3] == 'EOQ':
-        return_doc["Sanctions"] = { "program": "SDN Sanction List"}
     print(return_doc)
     return return_doc
 
