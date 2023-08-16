@@ -52,6 +52,7 @@ Each example contains a `README.md` with an explanation about the example and it
 | [Process Medical Data and Model in a Cage](https://github.com/evervault/examples/tree/main/medical-cage) <br/> Use Cages to run inference on a sensitive model and data. | Python |
 | [Run GPT-2 in a Cage](https://github.com/evervault/examples/tree/main/cages-llm) <br/> Generate text from a prompt inside of a Cage using GPT-2. | Python |
 | [Redact PII from OpenAI Prompts](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Categorize support tickets using OpenAI with PII redacted using Relay Redaction. | NodeJS |
+| [Run OCR on a Sensitive Document in a Cage](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Use Python and an OCR library to detect fields and determine the validity of a passport. | Python|
 
 ## Community Examples
 

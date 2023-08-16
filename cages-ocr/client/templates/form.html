@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+  <body>
+      <p">Passport: <input type="file" id="myFile" name="myFile" onchange="encryptFile(this)"></p><br>
+      <button id="submit" class="submit" onclick="submitInfo()">
+        Apply
+      </button>
+      
+    <script src="https://js.evervault.com/v2"></script>
+    <script>
+      const teamId = '{{team_id}}'
+      const appId = '{{app_id}}'
+      const evervault = new Evervault(teamId, appId);
+      let file;
+
+      async function encryptFile(input) {
+        file = input.files[0];
+        encrypted = await evervault.encrypt(file);     
+      }
+
+      async function submitInfo() {
+        console.log(file);
+
+        const formData = new FormData();
+        formData.append("myFile", encrypted);
+
+        const req = new XMLHttpRequest();
+        req.open("POST", "http://127.0.0.1:5000/form", true);
+        req.onreadystatechange = function () {
+          if (req.readyState === XMLHttpRequest.DONE) {
+                if (req.status === 200) {
+                  alert('Application status: ' + req.responseText);
+                }
+          }
+        };
+        req.send(formData);
+      }
+
+    </script>
+  </body>
+</html>
