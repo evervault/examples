@@ -1,7 +1,7 @@
 cryptography==41.0.3
 evervault==3.0.1
 evervault_attestation_bindings==0.2.0
-Flask==2.2.3
+Flask==2.2.5
 Jinja2==3.1.2
 PassportEye==2.2.1
 pdfminer==20191125
