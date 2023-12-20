@@ -17,4 +17,4 @@ torch==1.13.1
 torchvision==0.14.1
 boto3==1.26.83
 python-dotenv==0.21.1
-transformers==4.30.2
+transformers==4.36.0
