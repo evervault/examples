@@ -7,7 +7,7 @@ PassportEye==2.2.1
 pdfminer==20191125
 pycountry==22.3.5
 pycparser==2.21
-pycryptodome==3.17
+pycryptodome==3.19.1
 pyparsing==3.0.9
 pytesseract==0.3.10
 urllib3==1.26.18
