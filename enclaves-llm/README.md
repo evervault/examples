@@ -1,6 +1,6 @@
-# Run GPT2 in a Cage
+# Run GPT2 in an Enclave
 
-A Python app that takes in a text prompt and generates text using GPT-2. You can follow allong using the [associated guide from the Evervault docs](https://docs.evervault.com/guides/cages-llm).
+A Python app that takes in a text prompt and generates text using GPT-2. You can follow allong using the [associated guide from the Evervault docs](https://docs.evervault.com/guides/enclaves-llm).
 
 
 ## Prerequisites
@@ -10,48 +10,48 @@ A Python app that takes in a text prompt and generates text using GPT-2. You can
 - Docker installed ([get it here](https://docs.docker.com/get-docker/))
 
 
-## Install and Run the Cages CLI
+## Install and Run the Enclaves CLI
 
 ```
-curl https://cage-build-assets.evervault.com/cli/install -sL | sh
+curl https://enclave-build-assets.evervault.com/cli/v1/install -sL | sh
 ```
 
 
 ## Add the Environment Variables
-In the Cages Dashboard, add the following environment variables as secrets:
+In the Enclaves Dashboard, add the following environment variables as secrets:
 `S3_REGION`
 `ACCESS_KEY`
 `SECRET_ACCESS_KEY`
 `BUCKET_NAME`
 
 
-## Initialize the Cage
+## Initialize the Enclave
 
 ```
-ev-cage init -f ./Dockerfile \
---name llm-cage
+ev-enclave init -f ./Dockerfile \
+--name llm-enclave
 ```
 
 
-## Build the Cage
+## Build the Enclave
 
-`ev-cage build --write --output .`
+`ev-enclave build --write --output .`
 
 
-## Run the Cage
+## Run the Enclave
 
-`ev-cage deploy --eif-path ./enclave.eif`
+`ev-enclave deploy --eif-path ./enclave.eif`
 
 ## Make a CURL Request
 
-In your terminal make a CURL request to the Cage endpoint and pass in a prompt as JSON.
+In your terminal make a CURL request to the Enclave endpoint and pass in a prompt as JSON.
 
 ```
 curl -X POST \
 -H "API-Key: <API_KEY>" \
 -H 'Content-Type: application/json' \
 -d '{ "prompt": "Encryption is" }' \
-https://<cage_name>.<app_uuid>.cages.evervault.com/generate  -k
+https://<enclave_name>.<app_uuid>.enclave.evervault.com/generate  -k
 ```
 
 When run successfully, you should get a response that looks like the below.

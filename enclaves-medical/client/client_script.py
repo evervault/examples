@@ -7,11 +7,11 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
-cage_name = os.environ.get('CAGE_NAME')
+enclave_name = os.environ.get('ENCLAVE_NAME')
 app_id = os.environ.get('APP_ID')
 
-attested_session = evervault.cage_requests_session({ 
-    cage_name: {
+attested_session = evervault.attestable_enclave_session({ 
+    enclave_name: {
         "PCR0": "",
         "PCR1": "",
         "PCR2": "",
@@ -32,7 +32,7 @@ body, header = urllib3.encode_multipart_formdata(fields)
 start = time.time()
 
 response = attested_session.post(
-    f'https://{cage_name}.{app_id}.cages.evervault.com/upload',
+    f'https://{enclave_name}.{app_id}.enclave.evervault.com/upload',
     headers={'Content-Type': header},
 	data=body
 )
