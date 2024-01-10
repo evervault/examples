@@ -49,10 +49,10 @@ Each example contains a `README.md` with an explanation about the example and it
 | [OAuth 2 Access Tokens - Python](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/python) <br/> Use the Python SDK and Outbound Relay to encrypt access tokens from a Github OAuth app. | Python |
 | [OAuth 2 Access Tokens - JavaScript](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/js) <br/> Use the React and Node SDKs with Outbound Relay to encrypt access tokens from a Github OAuth app. | NodeJS |
 | [Encrypted Files to S3 Bucket](https://github.com/evervault/examples/tree/main/encrypted-files-s3) <br/> Use the React and Node SDKs to encrypt a file and upload it to an S3 bucket. | NodeJS |
-| [Process Medical Data and Model in a Cage](https://github.com/evervault/examples/tree/main/medical-cage) <br/> Use Cages to run inference on a sensitive model and data. | Python |
-| [Run GPT-2 in a Cage](https://github.com/evervault/examples/tree/main/cages-llm) <br/> Generate text from a prompt inside of a Cage using GPT-2. | Python |
+| [Process Medical Data and Model in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-medical) <br/> Use Enclaves to run inference on a sensitive model and data. | Python |
+| [Run GPT-2 in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-llm) <br/> Generate text from a prompt inside of an Enclave using GPT-2. | Python |
 | [Redact PII from OpenAI Prompts](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Categorize support tickets using OpenAI with PII redacted using Relay Redaction. | NodeJS |
-| [Run OCR on a Sensitive Document in a Cage](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Use Python and an OCR library to detect fields and determine the validity of a passport. | Python|
+| [Run OCR on a Sensitive Document in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-ocr) <br/> Use Python and an OCR library to detect fields and determine the validity of a passport. | Python|
 
 ## Community Examples
 

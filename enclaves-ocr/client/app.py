@@ -9,7 +9,7 @@ app.config['UPLOAD_PATH'] = 'uploads'
 
 APP_ID = os.environ.get('APP_ID')
 API_KEY = os.environ.get('EV_API_KEY')
-CAGE_NAME = os.environ.get('CAGE_NAME')
+ENCLAVE_NAME = os.environ.get('ENCLAVE_NAME')
 
 evervault.init(APP_ID, API_KEY)
 
@@ -22,8 +22,8 @@ def form():
             file_path = os.path.join(app.config['UPLOAD_PATH'], filename)
             uploaded_file.save(file_path)
 
-        attested_session = evervault.cage_requests_session({ 
-            CAGE_NAME: {
+        attested_session = evervault.attestable_enclave_session({ 
+            ENCLAVE_NAME: {
                 "PCR0": "",
                 "PCR1": "",
                 "PCR2": "",
@@ -43,7 +43,7 @@ def form():
         start = time.time()
 
         response = attested_session.post(
-            f'https://{CAGE_NAME}.{APP_ID}.cages.evervault.com/upload',
+            f'https://{ENCLAVE_NAME}.{APP_ID}.enclave.evervault.com/upload',
             headers={'Content-Type': header},
             data=body
         )
