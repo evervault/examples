@@ -6,7 +6,7 @@ cryptography==42.0.4
 evervault==2.1.1
 evervault_attestation_bindings==0.1.0a5
 Flask==2.2.5
-idna==3.4
+idna==3.7
 importlib-metadata==6.0.0
 itsdangerous==2.1.2
 Jinja2==3.1.3
