@@ -11,5 +11,5 @@ pycryptodome==3.19.1
 pyparsing==3.0.9
 pytesseract==0.3.10
 urllib3==1.26.18
-Werkzeug==3.0.1
+Werkzeug==3.0.3
 zipp==3.15.0
