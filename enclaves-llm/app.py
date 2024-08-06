@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 import time
 import logging
 import torch
-from transformers import GPT2Tokenizer
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import boto3
 import os
 
@@ -13,9 +13,10 @@ app.logger.setLevel(logging.INFO)
 device = 'cpu'
 
 app.logger.info("loading model")
-s3 = boto3.client('s3', aws_access_key_id=os.environ.get('ACCESS_KEY'), aws_secret_access_key=os.environ.get('SECRET_ACCESS_KEY'), region_name=os.environ.get('S3_REGION'))
-s3.download_file(os.environ.get('BUCKET_NAME'),'mingpt','./mingpt.pt')
-model = torch.load('./mingpt.pt')
+
+model_name = os.environ.get('MODEL_NAME', 'gpt2')
+
+model = GPT2LMHeadModel.from_pretrained(model_name)
 model.to(device)
 model.eval()
 app.logger.info("model loaded")
@@ -41,7 +42,7 @@ def generate():
     return jsonify(response)
 
 def generate_from_prompt(prompt='', num_samples=10, steps=20, do_sample=True):
-    tokenizer = GPT2Tokenizer.from_pretrained('gpt2-xl')
+    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
     if prompt == '':
         # to create unconditional samples...
         # huggingface/transformers tokenizer special cases these strings

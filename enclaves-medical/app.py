@@ -8,17 +8,15 @@ from torchvision import transforms
 import io
 import logging
 import boto3
-import os
+from urllib.request import urlretrieve
 
 app = Flask(__name__)
 
 app.logger.setLevel(logging.INFO)
 
+model_url = os.environ.get('MODEL_URL', 'https://github.com/evervault/examples/raw/main/enclaves-medical/tumor-model.pt')
 app.logger.info('downloading pre-trained model')
-
-# Load the model
-s3 = boto3.client('s3', aws_access_key_id=os.environ.get('ACCESS_KEY'), aws_secret_access_key=os.environ.get('SECRET_ACCESS_KEY'), region_name=os.environ.get('S3_REGION'))
-s3.download_file(os.environ.get('BUCKET_NAME'),'tumor-model.pt','./tumor-model.pt')
+urlretrieve(MODEL_URL, './tumor-model.pt')
 model = torch.jit.load('./tumor-model.pt')
 # Set the model to evaluation mode
 model.eval()

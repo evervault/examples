@@ -5,7 +5,6 @@ A Python app that takes in an image file of a brain scan and runs the image agai
 
 ## Prerequisites
 
-- An AWS account ([sign up or log in here](https://portal.aws.amazon.com/))
 - An Evervault account ([create a free account here](https://app.evervault.com/register))
 - Docker installed ([get it here](https://docs.docker.com/get-docker/))
 
@@ -18,11 +17,8 @@ curl https://enclave-build-assets.evervault.com/cli/v1/install -sL | sh
 
 
 ## Add the Environment Variables
-In the Enclaves Dashboard, add the following environment variables as secrets:
-`S3_REGION`
-`ACCESS_KEY`
-`SECRET_ACCESS_KEY`
-`BUCKET_NAME`
+
+In the Enclaves Dashboard, you can optinally override the `MODEL_URL` environment to point to image detection models.
 
 
 ## Initialize the Enclave
