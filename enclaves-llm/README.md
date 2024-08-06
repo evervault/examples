@@ -5,7 +5,6 @@ A Python app that takes in a text prompt and generates text using GPT-2. You can
 
 ## Prerequisites
 
-- An AWS account ([sign up or log in here](https://portal.aws.amazon.com/))
 - An Evervault account ([create a free account here](https://app.evervault.com/register))
 - Docker installed ([get it here](https://docs.docker.com/get-docker/))
 
@@ -19,11 +18,8 @@ curl https://enclave-build-assets.evervault.com/cli/v1/install -sL | sh
 
 ## Add the Environment Variables
 In the Enclaves Dashboard, add the following environment variables as secrets:
-`S3_REGION`
-`ACCESS_KEY`
-`SECRET_ACCESS_KEY`
-`BUCKET_NAME`
 
+`MODEL_NAME` (`gpt2` by default, see huggingface for more options)
 
 ## Initialize the Enclave
 
