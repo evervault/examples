@@ -18,7 +18,7 @@ curl https://enclave-build-assets.evervault.com/cli/v1/install -sL | sh
 
 ## Add the Environment Variables
 
-In the Enclaves Dashboard, you can optinally override the `MODEL_URL` environment to point to image detection models.
+In the Enclaves Dashboard, you can optinally override the `MODEL_URL` environment to point to other image detection models.
 
 
 ## Initialize the Enclave
