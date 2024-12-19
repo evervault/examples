@@ -43,16 +43,11 @@ Each example contains a `README.md` with an explanation about the example and it
 | Example | Runtime  |
 |:--------------------------- |:-----|
 | [Inbound Relay](https://github.com/evervault/examples/tree/main/inbound-relay-example) <br/> Use Inbound Relay to securely store your customer's personal data in a database. | NodeJS |
-| [Outbound Relay](https://github.com/evervault/examples/tree/main/outbound-relay-example) <br/> Use Outbound Relay to intercept your requests to third parties, and decrypt any Evervault encrypted data before forwarding it on to its destination. | NodeJS |
 | [Multiple Functions](https://github.com/evervault/examples/tree/main/multi-function-example) <br/> Demonstrates having multiple functions in a single github repository. | NodeJS |
 | [Encrypted Multi-PSP](https://github.com/evervault/examples/tree/main/encrypted-multi-psp-example) <br/> Use Evervault Inputs and Outbound Relay to collect and encrypt card details before conditionally sending them to multiple Payment Processors. | NodeJS |
 | [OAuth 2 Access Tokens - Python](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/python) <br/> Use the Python SDK and Outbound Relay to encrypt access tokens from a Github OAuth app. | Python |
 | [OAuth 2 Access Tokens - JavaScript](https://github.com/evervault/examples/tree/main/oauth2-access-tokens/js) <br/> Use the React and Node SDKs with Outbound Relay to encrypt access tokens from a Github OAuth app. | NodeJS |
 | [Encrypted Files to S3 Bucket](https://github.com/evervault/examples/tree/main/encrypted-files-s3) <br/> Use the React and Node SDKs to encrypt a file and upload it to an S3 bucket. | NodeJS |
-| [Process Medical Data and Model in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-medical) <br/> Use Enclaves to run inference on a sensitive model and data. | Python |
-| [Run GPT-2 in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-llm) <br/> Generate text from a prompt inside of an Enclave using GPT-2. | Python |
-| [Redact PII from OpenAI Prompts](https://github.com/evervault/examples/tree/main/relay-redaction) <br/> Categorize support tickets using OpenAI with PII redacted using Relay Redaction. | NodeJS |
-| [Run OCR on a Sensitive Document in an Enclave](https://github.com/evervault/examples/tree/main/enclaves-ocr) <br/> Use Python and an OCR library to detect fields and determine the validity of a passport. | Python|
 
 ## Community Examples
 
