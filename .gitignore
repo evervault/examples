@@ -1,0 +1,9 @@
+# System Files
+.DS_Store
+.vscode
+.idea
+.env
+
+# Node files
+node_modules
+dist
